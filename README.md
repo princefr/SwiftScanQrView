@@ -41,4 +41,8 @@ func ScanResult(ScanValue: String)
 ```
 
 
+ScanView also comes with some built in camera method like enabling or desabling the flash.
+do ` turnFlashOn() ` to turn the flash on and `turnFlashOff()` to turn the flash off
+
+
 
