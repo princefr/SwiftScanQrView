@@ -8,11 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: ScanView, ScanViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        delegate = self
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    
+    // get the scan view results
+    func ScanResult(ScanValue: String) {
+        let alert = UIAlertController(title: "Scan value", message: ScanValue, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true)
     }
 
 
